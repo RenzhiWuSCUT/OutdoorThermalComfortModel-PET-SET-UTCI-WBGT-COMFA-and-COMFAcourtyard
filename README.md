@@ -4,7 +4,7 @@ The code for commonly used outdoor thermal comfort models.
 
 ## Contributing 贡献
 
-Here, we have collected the code for commonly used outdoor thermal comfort models, which include PET, SET*, UTCI, WBGToutdoor, COMFA, and COMFAcourtyard.  
+Here, we have collected the code for commonly used outdoor thermal comfort models, which include _PET_, _SET_*, _UTCI_, _WBGT<sub>outdoor</sub>_, _COMFA_, and _COMFA<sub>courtyard</sub>_.  
 在这里，我们整理了一些常用的室外热舒适模型的代码，包括PET、SET*、UTCI、WBGToutdoor、COMFA和COMFAcourtyard。
 
 ## References 参考文献
