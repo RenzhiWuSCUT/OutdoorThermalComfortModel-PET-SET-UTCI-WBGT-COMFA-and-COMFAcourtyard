@@ -56,4 +56,4 @@ If you use this code in academic research, we recommend citing the following art
     
 ## License 许可证
 The license for this project is GNU v3.0. Anyone is free to use, modify, and distribute the source code and binary files of this project, but must comply with the terms and conditions set forth in the license. For more information about the license, please refer to the LICENSE file.  
-_该项目的许可证为 GNU v3.0。任何人都可以自由地使用、修改和分发该项目的源代码和二进制文件，但是需要遵守许可证规定的条款和条件。有关许可证的详细信息，请参阅 LICENSE 文件。_ 
+该项目的许可证为 GNU v3.0。任何人都可以自由地使用、修改和分发该项目的源代码和二进制文件，但是需要遵守许可证规定的条款和条件。有关许可证的详细信息，请参阅 LICENSE 文件。 
