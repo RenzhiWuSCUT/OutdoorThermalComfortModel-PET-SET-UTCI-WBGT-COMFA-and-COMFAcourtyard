@@ -1,10 +1,13 @@
 # OutdoorThermalIndex
-
 The code for commonly used outdoor thermal comfort models.  
 _常用室外热舒适模型的代码。_
 
+## Contributing 贡献
+
 Here, we have collected the code for commonly used outdoor thermal comfort models, which include PET, SET*, UTCI, WBGToutdoor, COMFA, and COMFAcourtyard.  
 _在这里，我们整理了一些常用的室外热舒适模型的代码，包括PET、SET*、UTCI、WBGToutdoor、COMFA和COMFAcourtyard。_
+
+## Usage 使用
 
 If you use this code in academic research, we recommend citing the following article: R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. This article provides a detailed description of the PET, SET*, COMFA, and COMFAcourtyard algorithms. Additionally, when using specific outdoor thermal comfort models, please also cite the corresponding references.  
 _如果您在学术论文中使用本代码，我们建议您引用以下文章：R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. 该论文详细介绍了PET、SET*、COMFA和COMFAcourtyard算法的相关内容。同时，当您使用具体的室外热舒适模型时，也请引用各模型对应的参考文献。_
@@ -51,3 +54,6 @@ _如果您在学术论文中使用本代码，我们建议您引用以下文章�
 [5] J.K. Vanos, J.S. Warland, T.J. Gillespie, N.A. Kenny, Improved predictive ability of climate-human-behaviour interactions with modifications to the COMFA outdoor energy budget model, Int. J. Biometeorol. 56 (2012) 1065–1074. https://doi.org/10.1007/s00484-012-0522-1.  
 [6] R.D. Brown, T.J. Gillespie, Estimating outdoor thermal comfort using a cylindrical radiation thermometer and an energy budget model, Int. J. Biometeorol. 30 (1986) 43–52. https://doi.org/10.1007/BF02192058.  
     
+## License 许可证
+The license for this project is GNU v3.0. Anyone is free to use, modify, and distribute the source code and binary files of this project, but must comply with the terms and conditions set forth in the license. For more information about the license, please refer to the LICENSE file.  
+_该项目的许可证为 GNU v3.0。任何人都可以自由地使用、修改和分发该项目的源代码和二进制文件，但是需要遵守许可证规定的条款和条件。有关许可证的详细信息，请参阅 LICENSE 文件。_ 
