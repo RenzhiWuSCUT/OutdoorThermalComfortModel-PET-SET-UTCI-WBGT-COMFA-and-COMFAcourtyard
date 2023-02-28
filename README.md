@@ -13,7 +13,7 @@ If you use this code in academic research, we recommend citing the following art
 [1] K. Blazejczyk, J. Baranowski, A. Blazejczyk, Heat stress and occupational health and safety - Spatial and temporal differentiation, Misc. Geogr. 18 (2014) 61–67. https://doi.org/10.2478/mgrsd-2014-0011.   
 [2] Chriswmackey, ladybug-legacy, (2018). https://github.com/ladybug-tools/ladybug-legacy.  
     
-**Reference of UTCI**:  
+**Reference of _UTCI_**:  
 [1] D. Fiala, Dynamic Simulation of Human Heat Transfer and Thermal Comfort, Sustain. Dev. 45 (1998) 1. https://www.dora.dmu.ac.uk/xmlui/handle/2086/4129.  
 [2] D. Fiala, K.J. Lomas, M. Stohrer, A computer model of human thermoregulation for a wide range of environmental conditions: The passive system, J. Appl. Physiol. 87 (1999) 1957–1972. https://doi.org/10.1152/jappl.1999.87.5.1957.  
 [3] D. Fiala, G. Havenith, P. Bröde, B. Kampmann, G. Jendritzky, UTCI-Fiala multi-node model of human heat transfer and temperature regulation, Int. J. Biometeorol. 56 (2012) 429–441. https://doi.org/10.1007/s00484-011-0424-7.  
