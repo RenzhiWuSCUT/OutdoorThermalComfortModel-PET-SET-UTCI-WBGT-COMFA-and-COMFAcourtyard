@@ -9,8 +9,8 @@ Here, we have collected the code for commonly used outdoor thermal comfort model
 
 ## References 参考文献
 
-If you use this code in academic research, we recommend citing the following article: R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. This article provides a detailed description of the PET, SET*, COMFA, and COMFAcourtyard algorithms. Additionally, when using specific outdoor thermal comfort models, please also cite the corresponding references.  
-如果您在学术论文中使用本代码，我们建议您引用以下文章：R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. 该论文详细介绍了PET、SET*、COMFA和COMFAcourtyard算法的相关内容。同时，当您使用具体的室外热舒适模型时，也请引用各模型对应的参考文献。
+If you use this code in academic research, we recommend citing the following article: R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. https://doi.org/10.1016/j.buildenv.2023.110150 This article provides a detailed description of the PET, SET*, COMFA, and COMFAcourtyard algorithms. Additionally, when using specific outdoor thermal comfort models, please also cite the corresponding references.  
+如果您在学术论文中使用本代码，我们建议您引用以下文章：R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. https://doi.org/10.1016/j.buildenv.2023.110150 该论文详细介绍了PET、SET*、COMFA和COMFAcourtyard算法的相关内容。同时，当您使用具体的室外热舒适模型时，也请引用各模型对应的参考文献。
 
 **References of _WBGT<sub>outdoor</sub>_**:  
 [1] K. Blazejczyk, J. Baranowski, A. Blazejczyk, Heat stress and occupational health and safety - Spatial and temporal differentiation, Misc. Geogr. 18 (2014) 61–67. https://doi.org/10.2478/mgrsd-2014-0011.   
