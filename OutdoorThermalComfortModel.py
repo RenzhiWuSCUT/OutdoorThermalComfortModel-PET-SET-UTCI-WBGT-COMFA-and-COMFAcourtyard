@@ -24,7 +24,7 @@ Date: Feb 7, 2023
 
 
 # Reference:
-# [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models, Build. Environ. https://doi.org/10.1016/j.buildenv.2023.110150
+# [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFA model for assessing courtyard thermal comfort in hot and humid regions: A comparative study with existing models, Build. Environ. 234 (2023) 110150. https://doi.org/10.1016/j.buildenv.2023.110150.
 class OCT:
 
     # Reference:
@@ -975,7 +975,7 @@ class OCT:
         return Q_Balance, Q_Meta, Q_Rad, -Q_Conv, - Q_Evap, - Q_L
 
     # Reference:
-    # [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models, Build. Environ. https://doi.org/10.1016/j.buildenv.2023.110150
+    # [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFA model for assessing courtyard thermal comfort in hot and humid regions: A comparative study with existing models, Build. Environ. 234 (2023) 110150. https://doi.org/10.1016/j.buildenv.2023.110150.
     # [2] W. Cheng, R.D. Brown, An energy budget model for estimating the thermal comfort of children, Int. J. Biometeorol. 64 (2020) 1355–1366. https://doi.org/10.1007/s00484-020-01916-x.
     # [3] N.A. Kenny, J.S. Warland, R.D. Brown, T.G. Gillespie, Part A: Assessing the performance of the comfa outdoor thermal comfort model on subjects performing physical activity, Int. J. Biometeorol. 53 (2009) 415–428. https://doi.org/10.1007/s00484-009-0226-3.
     # [4] N.A. Kenny, J.S. Warland, R.D. Brown, T.G. Gillespie, Part B: Revisions to the COMFA outdoor thermal comfort model for application to subjects performing physical activity, Int. J. Biometeorol. 53 (2009) 429–441. https://doi.org/10.1007/s00484-009-0227-2.
