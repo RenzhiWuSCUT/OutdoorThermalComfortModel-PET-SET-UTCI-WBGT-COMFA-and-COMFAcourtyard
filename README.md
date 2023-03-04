@@ -9,8 +9,8 @@ Here, we have collected the code for commonly used outdoor thermal comfort model
 
 ## References 参考文献
 
-If you use this code in academic research, we recommend citing the following article: R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. https://doi.org/10.1016/j.buildenv.2023.110150 This article provides a detailed description of the PET, SET*, COMFA, and COMFAcourtyard algorithms. Additionally, when using specific outdoor thermal comfort models, please also cite the corresponding references.  
-如果您在学术论文中使用本代码，我们建议您引用以下文章：R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, "The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models," Build. Environ. https://doi.org/10.1016/j.buildenv.2023.110150 该论文详细介绍了PET、SET*、COMFA和COMFAcourtyard算法的相关内容。同时，当您使用具体的室外热舒适模型时，也请引用各模型对应的参考文献。
+If you use this code in academic research, we recommend citing the following article: R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFA model for assessing courtyard thermal comfort in hot and humid regions: A comparative study with existing models, Build. Environ. 234 (2023) 110150. https://doi.org/10.1016/j.buildenv.2023.110150. This article provides a detailed description of the PET, SET*, COMFA, and COMFAcourtyard algorithms. Additionally, when using specific outdoor thermal comfort models, please also cite the corresponding references.  
+如果您在学术论文中使用本代码，我们建议您引用以下文章：R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFA model for assessing courtyard thermal comfort in hot and humid regions: A comparative study with existing models, Build. Environ. 234 (2023) 110150. https://doi.org/10.1016/j.buildenv.2023.110150. 该论文详细介绍了PET、SET*、COMFA和COMFAcourtyard算法的相关内容。同时，当您使用具体的室外热舒适模型时，也请引用各模型对应的参考文献。
 
 **References of _WBGT<sub>outdoor</sub>_**:  
 [1] K. Blazejczyk, J. Baranowski, A. Blazejczyk, Heat stress and occupational health and safety - Spatial and temporal differentiation, Misc. Geogr. 18 (2014) 61–67. https://doi.org/10.2478/mgrsd-2014-0011.   
@@ -47,7 +47,7 @@ If you use this code in academic research, we recommend citing the following art
 [5] R.D. Brown, T.J. Gillespie, Estimating outdoor thermal comfort using a cylindrical radiation thermometer and an energy budget model, Int. J. Biometeorol. 30 (1986) 43–52. https://doi.org/10.1007/BF02192058.  
 
 **References of _COMFA<sub>courtyard</sub>_**:  
-[1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models, Build. Environ.  
+[1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFA model for assessing courtyard thermal comfort in hot and humid regions: A comparative study with existing models, Build. Environ. 234 (2023) 110150. https://doi.org/10.1016/j.buildenv.2023.110150.  
 [2] W. Cheng, R.D. Brown, An energy budget model for estimating the thermal comfort of children, Int. J. Biometeorol. 64 (2020) 1355–1366. https://doi.org/10.1007/s00484-020-01916-x.  
 [3] N.A. Kenny, J.S. Warland, R.D. Brown, T.G. Gillespie, Part A: Assessing the performance of the comfa outdoor thermal comfort model on subjects performing physical activity, Int. J. Biometeorol. 53 (2009) 415–428. https://doi.org/10.1007/s00484-009-0226-3.  
 [4] N.A. Kenny, J.S. Warland, R.D. Brown, T.G. Gillespie, Part B: Revisions to the COMFA outdoor thermal comfort model for application to subjects performing physical activity, Int. J. Biometeorol. 53 (2009) 429–441. https://doi.org/10.1007/s00484-009-0227-2.  
