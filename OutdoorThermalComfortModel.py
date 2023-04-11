@@ -1162,7 +1162,7 @@ class OCT:
 
         if type(sex) == int or type(sex) == float:
             sex = 1 if sex < 1.5 else 2
-        if sex == 1:
+        if sex == 1 or 'male':
             rateMetaRestOneDay_kCal = 10 * weight_kg + 6.25 * height_m * 100 - 5 * age + 5
         else:
             rateMetaRestOneDay_kCal = 9.99 * weight_kg + 6.25 * height_m * 100 - 4.92 * age - 161
