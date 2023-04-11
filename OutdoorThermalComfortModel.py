@@ -1,4 +1,5 @@
 import math
+from typing import Union
 
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -24,14 +25,30 @@ Date: Feb 7, 2023
 
 
 # Reference:
-# [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFA model for assessing courtyard thermal comfort in hot and humid regions: A comparative study with existing models, Build. Environ. 234 (2023) 110150. https://doi.org/10.1016/j.buildenv.2023.110150.
+# [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models, Build. Environ.
 class OCT:
 
     # Reference:
     # [1] K. Blazejczyk, J. Baranowski, A. Blazejczyk, Heat stress and occupational health and safety - Spatial and temporal differentiation, Misc. Geogr. 18 (2014) 61–67. https://doi.org/10.2478/mgrsd-2014-0011.
     # [2] Chriswmackey, ladybug-legacy, (2018). https://github.com/ladybug-tools/ladybug-legacy.
     @staticmethod
-    def cal_WBGToutdoor(tAir_C=18.081, tMrt_C=28.94, vAir=2.13, rh=43.912):
+    def cal_WBGToutdoor(
+            tAir_C: float = 18.081,
+            tMrt_C: float = 28.94,
+            vAir: float = 2.13,
+            rh: float = 43.912) -> float:
+
+        """
+        Parameters 参数:
+        tAir_C : float : Air temperature [℃]. 空气温度[℃]。
+        tMrt_C : float : Mean radiant temperature [℃]. 平均辐射温度[℃]。
+        vAir : float : Air velocity [m/s]. 风速[m/s]。
+        rh : float : Relative humidity [%]. 相对湿度[%]。
+
+        Returns 返回值:
+        float : Wet Bulb Globe Temperature for outdoor conditions [℃]. 户外湿球温度[℃]。
+        """
+
         coefL = [-2836.5744, -6028.076559, 19.54263612, -0.02737830188, 0.000016261698, (7.0229056e-10),
                  (-1.8680009e-13)]
         tAir_K = tAir_C + 273.15
@@ -52,7 +69,21 @@ class OCT:
     # [5] B. P, F. D, B. K, H. I, J. G, K. B, T. B, H. G, Deriving the operational procedure for the Universal Thermal Climate Index (UTCI)., Int. J. Biometeorol. 56 (2012) 481–494. https://pubmed.ncbi.nlm.nih.gov/21626294/.
     # [6] Chriswmackey, ladybug-legacy, (2018). https://github.com/ladybug-tools/ladybug-legacy.
     @staticmethod
-    def cal_UTCI(tAir_C=18.081, tMrt_C=28.94, vAir=2.13, rh=43.912):
+    def cal_UTCI(tAir_C: float = 18.081,
+                 tMrt_C: float = 28.94,
+                 vAir: float = 2.13,
+                 rh: float = 43.912) -> float:
+        """
+        Parameters 参数:
+        tAir_C : float : Air temperature [℃]. 空气温度[℃]。
+        tMrt_C : float : Mean radiant temperature [℃]. 平均辐射温度[℃]。
+        vAir : float : Air velocity [m/s]. 风速[m/s]。
+        rh : float : Relative humidity [%]. 相对湿度[%]。
+
+        Returns 返回值:
+        float : Universal Thermal Climate Index [℃]. 通用热气候指数UTCI [℃]。
+        """
+
         def cal_svp(tAir_C):
             coefL = [-2836.5744, -6028.076559, 19.54263612, -0.02737830188, 0.000016261698, (7.0229056 * (10 ** (-10))),
                      (-1.8680009 * (10 ** (-13)))]
@@ -289,8 +320,29 @@ class OCT:
     # [4] C. Fountain, Marc;Huizenga, A Thermal Sensation Model For Use By The Engineering Profession, (1995). https://escholarship.org/uc/item/89d5c8k7.
     # [5] Building simulation resources: SET_star, (2002). http://news-sv.aij.or.jp/kankyo/s12/Resource/ap/SET_star/SET_star.htm.
     @staticmethod
-    def cal_SETstar(tAir_C=18.081, tMrt_C=28.94, vAir=2.13, rh=43.912, height_m=1.596, weight_kg=55.3, Q_movement=58.15,
-                    rCloClo=0.7):
+    def cal_SETstar(tAir_C: float = 18.081,
+                    tMrt_C: float = 28.94,
+                    vAir: float = 2.13,
+                    rh: float = 43.912,
+                    height_m: float = 1.596,
+                    weight_kg: float = 55.3,
+                    Q_movement: float = 58.15,
+                    rCloClo: float = 0.7) -> float:
+        """
+        Parameters 参数:
+        tAir_C : float : Air temperature [℃]. 空气温度[℃]。
+        tMrt_C : float : Mean radiant temperature [℃]. 平均辐射温度[℃]。
+        vAir : float : Air velocity [m/s]. 风速[m/s]。
+        rh : float : Relative humidity [%]. 相对湿度[%]。
+        height_m : float : Height of the person [m]. 身高[m]。
+        weight_kg : float : Weight of the person [kg]. 体重[kg]。
+        Q_movement : float : Metabolic heat production [W/m2]. 新陈代谢产热[W/m2]。
+        rCloClo : float : Clothing insulation [clo]. 服装热阻[clo]。
+
+        Returns 返回值:
+        set_star: float : Standard Effective Temperature (star) [℃]. 标准等效温度SET* [℃]。
+        et_star: float : Standard Effective Temperature (star) [℃]. 标准等效温度SET* [℃]。
+        """
 
         def cal_svp(tAir_C):
             return math.exp((186686. - 40301830. / (tAir_C + 235.)) / 10000.)
@@ -538,9 +590,34 @@ class OCT:
     # [5] E. Walther, Q. Goestchel, The P.E.T. comfort index: Questioning the model, Build. Environ. 137 (2018) 1–10. https://doi.org/10.1016/j.buildenv.2018.03.054.   @staticmethod
     # [6] Chriswmackey, ladybug-legacy, (2018). https://github.com/ladybug-tools/ladybug-legacy.
     @staticmethod
-    def cal_PET(tAir_C=21.0000, tMrt_C=22.0000, vAir=1.0000, rh=50.0000, age=35, sex=1, height_m=1.7500,
-                weight_kg=75.0000,
-                bodyPosture='standing', Q_meta=79.152, rCloClo=0.9):
+    def cal_PET(tAir_C: float = 21.0000,
+                tMrt_C: float = 22.0000,
+                vAir: float = 1.0000,
+                rh: float = 50.0000,
+                age: int = 35, sex: Union[int, str] = 1,
+                height_m: float = 1.7500,
+                weight_kg: float = 75.0000,
+                bodyPosture: str = 'standing',
+                Q_meta: float = 79.152,
+                rCloClo: float = 0.9) -> float:
+
+        """
+        Parameters 参数:
+        tAir_C : float : Air temperature [℃]. 空气温度[℃]。
+        tMrt_C : float : Mean radiant temperature [℃]. 平均辐射温度[℃]。
+        vAir : float : Air velocity [m/s]. 风速[m/s]。
+        rh : float : Relative humidity [%]. 相对湿度[%]。
+        age : int : Age [years]. 年龄[岁]。
+        sex : Union[int, str] : Sex of the person. 1 for male, 2 for female, 3 for average sex. 性别，1或'male'为男性，2或 'female'为女性，3或'average sex'为不考虑性别。
+        height_m : float : Height of the person [m]. 身高[m]。
+        weight_kg : float : Weight of the person [kg]. 体重[kg]。
+        bodyPosture : str : Body posture, can be 'standing', 'sitting', 'crouching'. 身体姿势，取值范围为'standing', 'sitting',或 'crouching'。
+        Q_meta : float : Metabolic heat production [W/m2]. 新陈代谢产热[W/m2]。
+        rCloClo : float : Clothing insulation [clo]. 服装热阻[clo]。
+
+        Returns 返回值:
+        float : Physiological Equivalent Temperature [℃]. 生理等效温度PET [℃]。
+        """
 
         qAir_ = rh / 100.0 * 6.105 * math.exp(17.27 * tAir_C / (237.7 + tAir_C))
         age = age  # in years
@@ -753,7 +830,7 @@ class OCT:
                 else:
                     break
 
-            # ？：求了这个根之后，判断根是否位置不对，似乎并不需要迭代20次，迭代1次就行
+            # 疑惑：求了这个根之后，判断根是否位置不对，似乎并不需要迭代20次，迭代1次就行
             # Question: Determine the root after calculation and check if the root position is not correct. It seems that only one iteration is needed, not 20 iterations.
             # 注：根的位置是被排列好的，每个根大概什么位置，什么数值是能被预知的
             # Note：The position of the root is arranged, and the approximate position and value of each root can be predicted.
@@ -872,9 +949,44 @@ class OCT:
     # [4] J.K. Vanos, J.S. Warland, T.J. Gillespie, N.A. Kenny, Improved predictive ability of climate-human-behaviour interactions with modifications to the COMFA outdoor energy budget model, Int. J. Biometeorol. 56 (2012) 1065–1074. https://doi.org/10.1007/s00484-012-0522-1.
     # [5] R.D. Brown, T.J. Gillespie, Estimating outdoor thermal comfort using a cylindrical radiation thermometer and an energy budget model, Int. J. Biometeorol. 30 (1986) 43–52. https://doi.org/10.1007/BF02192058.
     @staticmethod
-    def cal_COMFA(tAirC=28.0, ksolar=100.0, vAir=5.0, rh=60.0,
-                  height_m=1.8, weight_kg=78, rcl_clo=0.264, Ma=116.0, sex=1, age=38,
-                  alt=40.0, beam=1.0, SVF=1.0):
+    def cal_COMFA(tAirC: float = 28.0,
+                  ksolar: float = 100.0,
+                  vAir: float = 5.0,
+                  rh: float = 60.0,
+                  height_m: float = 1.8,
+                  weight_kg: float = 78,
+                  rcl_clo: float = 0.264,
+                  Ma: float = 116.0,
+                  sex: Union[int, str] = 1,
+                  age: int = 38,
+                  alt: float = 40.0,
+                  beam: float = 1.0,
+                  SVF: float = 1.0) -> float:
+        """
+        Parameters 参数:
+        tAirC : float : Air temperature [℃]. 空气温度[℃]。
+        ksolar : float : Solar radiation (or Global horizontal irradiance, GHI) [W/m2]. 太阳辐射[W/m2] (或全球水平辐照度GHI)。
+        vAir : float : Air velocity [m/s]. 风速[m/s]。
+        rh : float : Relative humidity [%]. 相对湿度[%]。
+        height_m : float : Height of the person [m]. 身高[m]。
+        weight_kg : float : Weight of the person [kg]. 体重[kg]。
+        rcl_clo : float : Clothing insulation [clo]. 服装热阻[clo]。
+        Ma : float : Metabolic rate [W/m2]. 新陈代谢率[W/m2]。
+        sex : Union[int, str] : Sex of the person. 1 for male, 2 for female. 性别，1或'male'为男性，2或 'female'为女性。
+        age : int : Age [years]. 年龄[岁]。
+        alt : float : Solar altitude angle [deg]. 太阳高度角[°]。
+        beam : float : Solar beam fraction [−]. 直射辐射透过率[−]。
+        SVF : float : Sky View Factor [−]. 天空角系数[−]。
+
+        Returns 返回值:
+        Q_Balance: float: Energy balance budget (COMFAcourtyard) [W/m2]. COMFA[W/m2]。
+        Q_Meta: float: Metabolic heat production [W/m2]. 代谢产热量[W/m2]。
+        Q_Rad: float: Shortwave absorption heat [W/m2]. 短波吸收热量[W/m2]。
+        Q_Conv: float: Convective heat dissipation [W/m2]. 对流散热[W/m2]。
+        Q_Evap: float: Evaporative heat dissipation [W/m2]. 蒸发散热[W/m2]。
+        Q_L: float: Longwave emission heat [W/m2]. 长波发射热量 [W/m2]。
+        level: int: Thermal comfort level [-]. 热舒适级别 [-]。
+        """
 
         def clo2sm(clo):
             rclKMn2Wn1 = 0.155 * clo
@@ -972,19 +1084,65 @@ class OCT:
 
         Q_Rad = R_Abs
         Q_Balance = Q_Meta + Q_Rad - Q_Conv - Q_Evap - Q_L
-        return Q_Balance, Q_Meta, Q_Rad, -Q_Conv, - Q_Evap, - Q_L
+
+        def get_q_balance_level(q_balance: float) -> str:
+            if q_balance < -150:
+                return "Would prefer to be much warmer"
+            elif -150 <= q_balance < -50:
+                return "Would prefer to be warmer"
+            elif -50 <= q_balance <= 50:
+                return "No change"
+            elif 50 < q_balance <= 150:
+                return "Would prefer to be cooler"
+            else:
+                return "Would prefer to be much cooler"
+        level = get_q_balance_level(Q_Balance)
+
+        return Q_Balance, Q_Meta, Q_Rad, -Q_Conv, - Q_Evap, - Q_L, level
 
     # Reference:
-    # [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFA model for assessing courtyard thermal comfort in hot and humid regions: A comparative study with existing models, Build. Environ. 234 (2023) 110150. https://doi.org/10.1016/j.buildenv.2023.110150.
+    # [1] R. Wu, X. Fang, R. Brown, S. Liu, H. Zhao, The COMFAcourtyard Model for Assessing Courtyard Thermal Comfort in Hot and Humid Regions: A Comparative Study with Existing Models, Build. Environ.
     # [2] W. Cheng, R.D. Brown, An energy budget model for estimating the thermal comfort of children, Int. J. Biometeorol. 64 (2020) 1355–1366. https://doi.org/10.1007/s00484-020-01916-x.
     # [3] N.A. Kenny, J.S. Warland, R.D. Brown, T.G. Gillespie, Part A: Assessing the performance of the comfa outdoor thermal comfort model on subjects performing physical activity, Int. J. Biometeorol. 53 (2009) 415–428. https://doi.org/10.1007/s00484-009-0226-3.
     # [4] N.A. Kenny, J.S. Warland, R.D. Brown, T.G. Gillespie, Part B: Revisions to the COMFA outdoor thermal comfort model for application to subjects performing physical activity, Int. J. Biometeorol. 53 (2009) 429–441. https://doi.org/10.1007/s00484-009-0227-2.
     # [5] J.K. Vanos, J.S. Warland, T.J. Gillespie, N.A. Kenny, Improved predictive ability of climate-human-behaviour interactions with modifications to the COMFA outdoor energy budget model, Int. J. Biometeorol. 56 (2012) 1065–1074. https://doi.org/10.1007/s00484-012-0522-1.
     # [6] R.D. Brown, T.J. Gillespie, Estimating outdoor thermal comfort using a cylindrical radiation thermometer and an energy budget model, Int. J. Biometeorol. 30 (1986) 43–52. https://doi.org/10.1007/BF02192058.
     @staticmethod
-    def cal_COMFAcourtyard(tAir_C=28.0, vAir=5.0, rh=60.0,
-                           height_m=1.8, weight_kg=78, rcl_clo=0.264, Q_movement=116.0, sex='male', age=38,
-                           tMrt_C=30.0, bodyPosture='standing'):
+    def cal_COMFAcourtyard(tAir_C: float = 28.0,
+                           vAir: float = 5.0,
+                           rh: float = 60.0,
+                           height_m: float = 1.8,
+                           weight_kg: float = 78,
+                           rcl_clo: float = 0.264,
+                           Q_movement: float = 116.0,
+                           sex: Union[int, str] = 'male',
+                           age: int = 38,
+                           tMrt_C: float = 30.0,
+                           bodyPosture: str = 'standing') -> float:
+
+        """
+        Parameters 参数:
+        tAir_C : float : Air temperature [℃]. 空气温度[℃]。
+        vAir : float : Air velocity [m/s]. 风速[m/s]。
+        rh : float : Relative humidity [%]. 相对湿度[%]。
+        height_m : float : Height of the person [m]. 身高[m]。
+        weight_kg : float : Weight of the person [kg]. 体重[kg]。
+        rcl_clo : float : Clothing insulation [clo]. 服装热阻[clo]。
+        Q_movement : float : Metabolic rate [W/m2]. 新陈代谢率[W/m2]。
+        sex : Union[int, str] : Sex of the person. 'male' for male, 'female' for female. 性别，'male'为男性，'female'为女性。
+        age : int : Age [years]. 年龄[岁]。
+        tMrt_C : float : Mean radiant temperature [℃]. 平均辐射温度[℃]。
+        bodyPosture : str : Body posture, can be 'standing', 'sitting', 'crouching'. 身体姿势，取值范围为'standing', 'sitting',或 'crouching'。
+
+        Returns 返回值:
+        Q_Balance: float: Energy balance budget (COMFAcourtyard) [W/m2]. COMFAcourtyard[W/m2]。
+        Q_Meta: float: Metabolic heat production [W/m2]. 代谢产热量[W/m2]。
+        Q_Rad: float: Radiant heat transfer [W/m2]. 辐射换热[W/m2]。
+        Q_Conv: float: Convective heat transfer [W/m2]. 对流换热[W/m2]。
+        Q_Evap: float: Evaporative heat transfer [W/m2]. 蒸发换热[W/m2]。
+        Q_Cond: float: Conductive heat transfer [W/m2]. 导热换热[W/m2]。
+        level: int: thermal comfort level [-]. 热舒适级别 [-]。
+        """
 
         def clo2sm(clo):
             rclKMn2Wn1 = 0.155 * clo
@@ -1128,7 +1286,26 @@ class OCT:
         if eMax <= Q_Evap:  Q_Evap = eMax
 
         Q_Balance = Q_Meta + Q_Rad - Q_Conv - Q_Evap + Q_Cond
-        return (Q_Balance, Q_Meta, Q_Rad, - Q_Conv, - Q_Evap, Q_Cond)
+
+        def get_q_balance_level(q_balance: float) -> int:
+            if q_balance < -118.85181:
+                return -3  # Very Cold
+            elif -118.85181 <= q_balance < -62.29072398:
+                return -2  # Cold
+            elif -62.29072398 <= q_balance < -5.729638009:
+                return -1  # Cool (Comfort Zone)
+            elif -5.729638009 <= q_balance < 50.83144796:
+                return 0  # Neutral (Comfort Zone)
+            elif 50.83144796 <= q_balance < 107.3925339:
+                return 1  # Warm (Comfort Zone)
+            elif 107.3925339 <= q_balance < 163.9536199:
+                return 2  # Hot
+            else:
+                return 3  # Very Hot
+
+        level = get_q_balance_level(Q_Balance)
+
+        return (Q_Balance, Q_Meta, Q_Rad, - Q_Conv, - Q_Evap, Q_Cond, level)
 
 
 class mainT:
