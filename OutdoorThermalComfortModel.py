@@ -981,7 +981,7 @@ class OCT:
         Returns 返回值:
         Q_Balance: float: Energy balance budget (COMFAcourtyard) [W/m2]. COMFA[W/m2]。
         Q_Meta: float: Metabolic heat production [W/m2]. 代谢产热量[W/m2]。
-        Q_Rad: float: Shortwave absorption heat [W/m2]. 短波吸收热量[W/m2]。
+        Q_Rad: float: Radiation absorption heat [W/m2]. 辐射吸收热量[W/m2]。
         Q_Conv: float: Convective heat dissipation [W/m2]. 对流散热[W/m2]。
         Q_Evap: float: Evaporative heat dissipation [W/m2]. 蒸发散热[W/m2]。
         Q_L: float: Longwave emission heat [W/m2]. 长波发射热量 [W/m2]。
