@@ -1087,15 +1087,15 @@ class OCT:
 
         def get_q_balance_level(q_balance: float) -> str:
             if q_balance < -150:
-                return "Would prefer to be much warmer"
+                return -2  # "Would prefer to be much warmer"
             elif -150 <= q_balance < -50:
-                return "Would prefer to be warmer"
+                return -1  # "Would prefer to be warmer"
             elif -50 <= q_balance <= 50:
-                return "No change"
+                return 0  # "No change"
             elif 50 < q_balance <= 150:
-                return "Would prefer to be cooler"
+                return 1  # "Would prefer to be cooler"
             else:
-                return "Would prefer to be much cooler"
+                return 2  # "Would prefer to be much cooler"
         level = get_q_balance_level(Q_Balance)
 
         return Q_Balance, Q_Meta, Q_Rad, -Q_Conv, - Q_Evap, - Q_L, level
