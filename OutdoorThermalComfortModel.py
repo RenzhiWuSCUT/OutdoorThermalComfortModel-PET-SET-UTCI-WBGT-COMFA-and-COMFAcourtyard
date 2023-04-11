@@ -1320,7 +1320,7 @@ class mainT:
         val_COMFAcourtyard = OCT.cal_COMFAcourtyard()[0]
         print("PET: ", val_PET)
         print("SET*: ", val_SETstar)
-        print("UTC: ", val_UTCI)
+        print("UTCI: ", val_UTCI)
         print("WBGT: ", val_WBGT)
         print("COMFA: ", val_COMFA)
         print("COMFAcourtyard: ", val_COMFAcourtyard)
