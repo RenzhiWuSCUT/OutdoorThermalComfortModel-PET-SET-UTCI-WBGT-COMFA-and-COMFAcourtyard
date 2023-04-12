@@ -1,6 +1,6 @@
 # Outdoor thermal comfort models 室外热舒适模型
 The code for commonly used outdoor thermal comfort models.  
-常用室外热舒适模型的代码。
+_常用室外热舒适模型的代码。_  
 
 ## Contributing 贡献
 
