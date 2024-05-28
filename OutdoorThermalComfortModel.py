@@ -1054,9 +1054,9 @@ class OCT:
         if ReNumber >= 40000:
             rAerodynamic = (0.17 / ((0.71 ** 0.33) * 0.000022 * 0.0266 * (ReNumber ** 0.805)))
         elif ReNumber >= 4000 and ReNumber < 40000:
-            rAerodynamic = (0.17 / ((0.71 ** 0.33) * 0.000022 * 0.683 * (ReNumber ** 0.466)))
-        else:
             rAerodynamic = (0.17 / ((0.71 ** 0.33) * 0.000022 * 0.193 * (ReNumber ** 0.618)))
+        else:
+            rAerodynamic = (0.17 / ((0.71 ** 0.33) * 0.000022 * 0.683 * (ReNumber ** 0.466)))
         eSweat = 0.42 * (Q_Meta - 58)
         cAir = 1212.
         rTissue = cAir / (0.13 * eSweat + 15)
