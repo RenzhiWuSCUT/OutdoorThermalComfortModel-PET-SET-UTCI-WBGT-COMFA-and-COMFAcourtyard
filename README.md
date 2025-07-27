@@ -5,10 +5,10 @@ _常用室外热舒适模型的代码。_
 ## Contributing 贡献
 
 Here, we have collected the code for commonly used outdoor thermal comfort models, which include _PET_, _SET_\*, _UTCI_, _WBGT<sub>outdoor</sub>_, _COMFA_, and _COMFA<sub>courtyard</sub>_.  
-_在这里，我们整理了一些常用的室外热舒适模型的代码，包括PET、SET\*、UTCI、 WBGT<sub>outdoor</sub>、 COMFA 和 COMFA<sub>courtyard</sub>。_   
+我们整理了一些常用的室外热舒适模型的代码，包括PET、SET\*、UTCI、 WBGT<sub>outdoor</sub>、 COMFA 和 COMFA<sub>courtyard</sub>。 
   
 These models all have Python version codes, and also have Excel VBA codes (You can download an Excel spreadsheet for calculation).  
-_这些模型都有python版本的代码和Excel VBA代码（可以下载Excel表直接计算）_  
+包括这些模型的python和Excel VBA代码（可以下载Excel表直接计算）。 
 
 ## Figures 插图
 
